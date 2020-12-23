@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+h1 {
+  text-align: center;
+  color: #3c1518;
+  font-size: 3rem;
+  padding: 20px;
+}
+
+.line {
+  background: #dacab3;
+  width: 100px;
+  height: 2px;
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  text-transform: capitalize;
+  border: none;
+  background: white;
+  color: #d58936;
+  border-radius: 5px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.categories button:hover {
+  background: #d58936;
+  color: white;
+}
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 3rem auto;
+  width: 90vw;
+  max-width: 1200px;
+  justify-items: center;
+  gap: 2rem;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: auto;
+  background: #fff1e3;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 3px solid #d58936;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-header h4 {
+  color: #3c1518;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.product-header span {
+  color: #d58936;
+  font-weight: bold;
+}
+
+.product-footer p {
+  margin-top: 5px;
+  color: #917674;
+}
+
+.product-footer span {
+  color: #ffffff;
+  background: #d58936;
+  padding: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin: 20px 0 0;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    grid-template-columns: 1fr;
+  }
+  .product img {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .categories button {
+    padding: 5px 10px;
+  }
+  .product img {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .categories {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(35deg, #0b2e46, #cde9fc);
+  min-height: 100vh;
+}
+
+h3 {
+  font-size: 3rem;
+  color: #0b2e46;
+}
+
+.line {
+  width: 10%;
+  height: 5px;
+  margin: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.container h3 {
+  padding: 10px 10px 0;
+}
+
+.tour {
+  width: 50%;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.336);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.5s;
+  background-color: white;
+}
+
+.tour:hover {
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.315);
+}
+
+.tour ul {
+  list-style-type: none;
+}
+
+.tour img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.tour-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tour-content div span {
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  color: #0b2e46;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+.tour-content div span b {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #10a0ff;
+}
+
+.tour-content p {
+  font-size: 1.2rem;
+  color: #97a8bb;
+  padding: 20px;
+}
+
+.btn-show {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #10a0ff;
+  font-size: 1rem;
+}
+
+.btn-show:hover {
+  cursor: pointer;
+}
+
+.btn-refresh {
+  padding: 10px 20px;
+  background: rgb(73, 98, 206);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-refresh:hover {
+  background: rgb(100, 120, 209);
+  cursor: pointer;
+}
+.btn-danger {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid crimson;
+  margin: 0 auto 20px;
+  width: 40%;
+  color: crimson;
+  text-transform: capitalize;
+  transition: all 0.15s;
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  background: crimson;
+  color: white;
+  cursor: pointer;
+}
+
+.tour-content div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.loading span {
+  font-size: 2rem;
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-clip: padding-box;
+  border: 3px solid darkslateblue;
+  border-bottom: 3px solid white;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+  margin-right: 20px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
